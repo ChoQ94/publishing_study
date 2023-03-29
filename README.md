@@ -10,3 +10,4 @@
 - jQuery(selector, [context])
 - jQuery(element) ex) jQuery(document.body).css("background-color",'black);
 - $("ul.foo") 이런 식으로 감싸는 형태를 Wrapper 라고 함
+- #id .class

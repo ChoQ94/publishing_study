@@ -1,12 +1,38 @@
+<!DOCTYPE html>
 <html>
+  <style>
+    #qwe{
+      background-color: aquamarine;
+      font-style: none;
+    }
+    .foo {
+      list-style: none;
+    }
+  </style>
   <body>
-    <ul>
+    <div id="qwe">
+    <ul class="foo">
       <li>item 1</li>
     </ul>
-    <ul class="foo">
+    <ul class="foo clickable">
       <li>item 2</li>
     </ul>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    js 관련 부분은 </body> 태그 위에 삽입할것. DOM이 로드되고 JS가 로드되어야 페이지가 빨리 열린다.
+  </div>
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function ($) {
+        $("ul.foo.clickable").click(function () {
+          $("li", this).css("background-color", "blue");
+          $("li", this).css("color", "white");
+        });
+      })(jQuery);
+    </script>
+    <script type="text/javascript">
+      jQuery(document.body).css('background-color','green')
+    </script>
+    </script>
   </body>
 </html>
